@@ -1,0 +1,11 @@
+# Finding the largest prime factor in any number
+num=600851475143
+i=2 # start with the smallest prime factor
+for w in range(0,num):
+    if i >= num: # Prime factor of the number should not be greater than the number
+        break
+    elif num % i == 0: # Check if the number is evenly divisible by i
+        num = num / i
+    else:
+        i= i + 1 #increase the prime factor by 1 and rerun the loop
+print ("largest prime factor is: "+str(num))
